@@ -19,15 +19,9 @@ public class Tuple<T> implements List<T> {
 	}
 	
 	@SuppressWarnings("unchecked")
-	public Tuple(List<T> list) {
-		this();
-		internalData = (T[]) list.toArray();
-		buildMap();
-	}
-	
 	public Tuple(Collection<T> collection) {
 		this();
-		internalData = collection.toArray(internalData);
+		internalData = (T[]) collection.toArray();
 		buildMap();
 	}
 	
